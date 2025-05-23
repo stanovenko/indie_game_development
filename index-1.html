@@ -99,7 +99,7 @@
         <div class="item"></div>
     </div>
 
-    <audio id="sound-bu" src="sounds/bu.mp3" loop></audio>
+    <audio id="sound-zu" src="sounds/zu.mp3" loop></audio>
     <audio id="sound-shot" src="sounds/shot.mp3"></audio>
 
     <script>
@@ -111,7 +111,7 @@
         zombieImg.src = "images/zombie.png"
         const missCounter = document.getElementById("miss-counter")
         const soundBtn = document.getElementById("sound-btn")
-        const bu = document.getElementById("sound-bu")
+        const zu = document.getElementById("sound-zu")
         const hitImg = document.createElement("img")
         hitImg.src = "images/blood.png"
         const hitCounter = document.getElementById("hit-counter")
@@ -143,12 +143,12 @@
 
         // включение/выключение фонового звука
         soundBtn.onclick = function (params) {
-            if (bu.currentTime !== 0) {
-                bu.pause()
-                bu.currentTime = 0
+            if (zu.currentTime !== 0) {
+                zu.pause()
+                zu.currentTime = 0
                 soundBtn.innerHTML = "SOUND ON"
             } else {
-                bu.play()
+                zu.play()
                 soundBtn.innerHTML = "SOUND OFF"
             }
         }
